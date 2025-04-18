@@ -1,16 +1,17 @@
 package org.cyklon.tryoutspringboot;
 
+import org.apache.naming.factory.BeanFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 @SpringBootApplication
 public class TryoutspringbootApplication {
 
     public static void main(String[] args) {
 
-        var ctx = SpringApplication.run(TryoutspringbootApplication.class, args);
-        MyFirstService myFirstService = ctx.getBean(MyFirstService.class);
-        System.out.println(myFirstService.tellStory());
+        SpringApplication.run(TryoutspringbootApplication.class, args);
+
     }
 
 }
