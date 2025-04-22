@@ -1,7 +1,5 @@
 package org.cyklon.tryoutspringboot.Controller;
 
-import org.cyklon.tryoutspringboot.DTO.Category.CatDTO;
-import org.cyklon.tryoutspringboot.DTO.Category.CatDTOSave;
 import org.cyklon.tryoutspringboot.Service.CategoryService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
@@ -25,6 +23,18 @@ public class CategoryController {
     public List<CatDTO> getCategory() {
         List<CatDTO> allCategory = categoryService.getAllCategory();
         return allCategory;
+    }
+
+    @PutMapping("/update")
+    public String updateCategory(@RequestBody CatDTOUpdate catDTOUpdate) {
+        String id = categoryService.updateCategory(catDTOUpdate);
+        return "Updated Category";
+    }
+
+    @DeleteMapping(path="/delete/{id}")
+    public String deleteCategory (@PathVariable(value="id")int id) {
+        boolean deleteCategory = categoryService.deleteCategory(id);
+        return "Deleted the Category";
     }
 
 }

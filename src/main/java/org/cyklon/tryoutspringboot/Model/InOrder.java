@@ -1,19 +1,25 @@
 package org.cyklon.tryoutspringboot.Model;
 
-
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name="category")
+@Table(name="inorder")
 @Getter
 @Setter
-public class Category {
+public class InOrder {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String name;
+    @ManyToOne
+    private GRN grn;
+
+    @ManyToOne
+    private Product product;
+
+    private int quantityReceived;
+    private double unitCost;
 }

@@ -1,19 +1,20 @@
 package org.cyklon.tryoutspringboot.Model;
 
-
 import jakarta.persistence.*;
 import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name="category")
+@Table(name="customer")
 @Getter
 @Setter
-public class Category {
+public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String name;
+    private String fullName;
+    private String email;
+    private String phone;
 }
