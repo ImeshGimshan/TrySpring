@@ -17,6 +17,7 @@ public class Product {
     private String name;
     private double price;
     private int stock;
+    private int quantity;
 
     @ManyToOne
     private Category category;

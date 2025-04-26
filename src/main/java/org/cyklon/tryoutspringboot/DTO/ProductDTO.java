@@ -18,6 +18,7 @@ public class ProductDTO {
     @Min(0)
     private int quantity;
 
+
     private Long categoryId;
     private Long supplierId;
 }
