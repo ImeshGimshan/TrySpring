@@ -6,20 +6,20 @@ import lombok.Getter;
 import lombok.Setter;
 
 @Entity
-@Table(name="inorder")
+@Table(name="grnItems")
 @Getter
 @Setter
-public class InOrder {
+public class GRNItems {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+
+    private int quantityReceived;
+    private double unitCost;
 
     @ManyToOne
     private GRN grn;
 
     @ManyToOne
     private Product product;
-
-    private int quantityReceived;
-    private double unitCost;
 }

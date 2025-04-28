@@ -4,16 +4,16 @@ import jakarta.validation.constraints.Positive;
 import lombok.Data;
 
 @Data
-public class InOrderDTO {
+public class GRNItemsDTO {
     private Long id;
-
-    private Long grnId;
-
-    private Long productId;
 
     @Positive
     private int quantityReceived;
 
     @Positive
     private double unitCost;
+
+    private Long grnId;
+
+    private Long productId;
 }

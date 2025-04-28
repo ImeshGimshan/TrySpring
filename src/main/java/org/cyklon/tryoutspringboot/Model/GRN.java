@@ -19,10 +19,12 @@ public class GRN {
 
     private LocalDateTime receivedDate;
 
+    private double total;
+
     @ManyToOne
     private Supplier supplier;
 
     @OneToMany(mappedBy = "grn" , cascade = CascadeType.ALL)
-    private List<InOrder> inOrders;
+    private List<GRNItems> grnItems;
 
 }

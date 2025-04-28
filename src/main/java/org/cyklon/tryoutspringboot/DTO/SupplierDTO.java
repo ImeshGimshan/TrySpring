@@ -12,4 +12,7 @@ public class SupplierDTO {
 
     @NotBlank(message = "Contact is required")
     private String contact;
+
+    @NotBlank(message="Address is required")
+    private String address;
 }

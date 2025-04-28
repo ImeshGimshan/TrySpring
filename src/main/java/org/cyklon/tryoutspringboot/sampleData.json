@@ -1,0 +1,146 @@
+{
+  "Base": {
+    "createAt": "2023-09-20T10:00:00Z",
+    "updateAt": "2023-09-20T10:00:00Z",
+    "createBy": "John Doe",
+    "updateBy": "John Doe"
+  },
+
+  "Category": {
+    "id": 1,
+    "name": "Electronics",
+    "description": "Electronic devices and gadgets"
+  },
+
+
+  "Product": {
+    "id": 1,
+    "name": "Laptop",
+    "description": "High-performance laptop",
+    "price": 999.99,
+    "categoryId": 1,
+    "stockQuantity": 10,
+    "imageUrl": "https://example.com/laptop.jpg"
+  },
+
+
+  "Supplier": {
+    "id": 1,
+    "name": "ABC Electronics",
+    "contactInfo": "contact@abc.com",
+    "address": "123 Main St, Colombo"
+  },
+
+
+  "Customer": {
+    "id": 1,
+    "name": "John Doe",
+    "contactInfo": "john.doe@example.com",
+    "address": "456 Elm St, Colombo"
+  },
+
+
+  "User": {
+    "id": 1,
+    "username": "john_doe",
+    "email": "john.doe@example.com",
+    "password": "password123",
+    "role": "user"
+  },
+
+
+  "Grn": {
+    "id": 1,
+    "supplierId": 1,
+    "total": 0
+  },
+
+
+  "invoice": {
+    "id": 1,
+    "customerId": 1,
+    "total": 0
+  },
+
+
+  "GrnItem": {
+    "id": 1,
+    "grnId": 1,
+    "productId": 1,
+    "costPrice": 10.99,
+    "quantity": 2
+  },
+
+
+  "InvoiceItem": {
+    "id": 1,
+    "invoiceId": 1,
+    "productId": 1,
+    "price": 12.99,
+    "quantity": 2
+  },
+
+
+  "Inventory": {
+    "id": 2,
+    "GrnItemId": 10,
+    "productId": 1,
+    "costPrice": 10.99,
+    "quantity": 0,
+    "date": "2023-09-20"
+  },
+
+
+  "GrnDto": {
+    "id": 1,
+    "supplierId": 1,
+    "total": 0,
+    "GRNItems": [
+      {
+        "id": 1,
+        "productId": 1,
+        "costPrice": 10.99,
+        "quantity": 2
+      },
+      {
+        "id": 2,
+        "productId": 2,
+        "costPrice": 19.99,
+        "quantity": 1
+      },
+      {
+        "id": 3,
+        "productId": 3,
+        "costPrice": 5.99,
+        "quantity": 3
+      }
+    ]
+  },
+
+
+  "invoiceDto": {
+    "id": 1,
+    "customerId": 1,
+    "total": 0,
+    "invoiceItems": [
+      {
+        "id": 1,
+        "productId": 1,
+        "price": 12.99,
+        "quantity": 2
+      },
+      {
+        "id": 2,
+        "productId": 2,
+        "price": 22.99,
+        "quantity": 1
+      },
+      {
+        "id": 3,
+        "productId": 3,
+        "price": 7.99,
+        "quantity": 3
+      }
+    ]
+  }
+}

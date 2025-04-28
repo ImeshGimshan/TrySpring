@@ -14,6 +14,9 @@ public class Inventory {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
+    private Long GrnItemId;
+    private double costPrice;
+
     private int quantityAvailable;
 
     @OneToOne

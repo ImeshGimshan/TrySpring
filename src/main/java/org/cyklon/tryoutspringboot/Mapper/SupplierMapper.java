@@ -11,6 +11,7 @@ public class SupplierMapper {
         supplier.setId(dto.getId());
         supplier.setName(dto.getName());
         supplier.setContact(dto.getContact());
+        supplier.setAddress(dto.getAddress());
         return supplier;
     }
 
@@ -19,6 +20,7 @@ public class SupplierMapper {
         dto.setId(entity.getId());
         dto.setName(entity.getName());
         dto.setContact(entity.getContact());
+        dto.setAddress(entity.getAddress());
         return dto;
     }
 }

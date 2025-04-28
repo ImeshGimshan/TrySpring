@@ -10,11 +10,21 @@ public class ProductDTO {
     private Long id;
 
     @NotBlank
+    private Long barcode;
+
+    @NotBlank
     private String name;
 
     @Positive
     private double price;
 
+    @NotBlank
+    private String description;
+
+    @NotBlank
+    private String imageUrl;
+
+    //stock product quantity
     @Min(0)
     private int quantity;
 

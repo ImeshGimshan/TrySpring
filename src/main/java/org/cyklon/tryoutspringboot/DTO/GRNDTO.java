@@ -13,5 +13,5 @@ public class GRNDTO {
 
     private Long supplierId;
 
-    private List<InOrderDTO> inOrders;
+    private List<GRNItemsDTO> grnItemsDTO;
 }

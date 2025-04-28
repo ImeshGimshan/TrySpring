@@ -1,5 +1,6 @@
 package org.cyklon.tryoutspringboot.Service;
 
+import jakarta.transaction.Transactional;
 import org.cyklon.tryoutspringboot.DTO.CategoryDTO;
 import org.cyklon.tryoutspringboot.Mapper.CategoryMapper;
 import org.cyklon.tryoutspringboot.Model.Category;
@@ -13,11 +14,14 @@ import java.util.stream.Collectors;
 @Service
 public class CategoryService {
 
-    @Autowired
-    private CategoryRepository categoryRepository;
+    private final CategoryRepository categoryRepository;
 
-    @Autowired
-    private CategoryMapper categoryMapper;
+    private final CategoryMapper categoryMapper;
+
+    public CategoryService(CategoryRepository categoryRepository, CategoryMapper categoryMapper) {
+        this.categoryRepository = categoryRepository;
+        this.categoryMapper = categoryMapper;
+    }
 
     public CategoryDTO createCategory (CategoryDTO dto){
         Category category = categoryMapper.toEntity(dto);
@@ -37,6 +41,7 @@ public class CategoryService {
         return categoryMapper.toDTO(category);
     }
 
+    @Transactional
     public CategoryDTO updateCategory(Long id , CategoryDTO dto){
         Category existing = categoryRepository.findById(id)
                 .orElseThrow(()-> new RuntimeException("Category not found"));
